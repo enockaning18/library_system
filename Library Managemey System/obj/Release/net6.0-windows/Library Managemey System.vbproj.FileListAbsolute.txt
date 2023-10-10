@@ -1,0 +1,33 @@
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\Library Managemey System.exe
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\Library Managemey System.deps.json
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\Library Managemey System.runtimeconfig.json
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\Library Managemey System.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\Library Managemey System.pdb
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\System.Data.SqlClient.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\runtimes\win-arm64\native\sni.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\runtimes\win-x64\native\sni.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\runtimes\win-x86\native\sni.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\bin\Release\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.vbproj.AssemblyReference.cache
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Author.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Books.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Dashboard.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Form1.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Login.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Resources.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Readers.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Sgnup.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Staff.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library_Managemey_System.Users.resources
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.vbproj.GenerateResource.cache
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.AssemblyInfoInputs.cache
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.AssemblyInfo.vb
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.vbproj.CoreCompileInputs.cache
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.vbproj.CopyComplete
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\refint\Library Managemey System.dll
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.pdb
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\Library Managemey System.genruntimeconfig.cache
+C:\Users\_okyere\Desktop\Virtual Basic\Library Managemey System\Library Managemey System\obj\Release\net6.0-windows\ref\Library Managemey System.dll
