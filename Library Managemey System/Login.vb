@@ -45,6 +45,7 @@ Public Class Login
             Username = txtUsername.Text
             Password = txtPassword.Text
 
+
             Dim queryCommand As SqlCommand = New SqlCommand("SELECT Username, Password FROM Users  WHERE Username = @Username AND Password = @Password", dbconn)
             queryCommand.Parameters.Add("@Username", SqlDbType.VarChar).Value = Username
             queryCommand.Parameters.Add("@Password", SqlDbType.VarChar).Value = Password

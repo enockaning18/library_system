@@ -23,29 +23,29 @@ Partial Class Staff
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
-        Me.Button17 = New System.Windows.Forms.Button()
-        Me.Button15 = New System.Windows.Forms.Button()
-        Me.Button16 = New System.Windows.Forms.Button()
-        Me.Button14 = New System.Windows.Forms.Button()
-        Me.Button13 = New System.Windows.Forms.Button()
-        Me.Button12 = New System.Windows.Forms.Button()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.TextBox7 = New System.Windows.Forms.TextBox()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
+        Me.rbnFemale = New System.Windows.Forms.RadioButton()
+        Me.rbnMale = New System.Windows.Forms.RadioButton()
+        Me.btnDelete = New System.Windows.Forms.Button()
+        Me.btnEdit = New System.Windows.Forms.Button()
+        Me.btnUpdate = New System.Windows.Forms.Button()
+        Me.btnAdd = New System.Windows.Forms.Button()
+        Me.txtReset = New System.Windows.Forms.Button()
+        Me.txtPrint = New System.Windows.Forms.Button()
+        Me.txtPhone = New System.Windows.Forms.TextBox()
+        Me.txtSearch = New System.Windows.Forms.TextBox()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.txtLastName = New System.Windows.Forms.TextBox()
         Me.Panel11 = New System.Windows.Forms.Panel()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Label11 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.lable = New System.Windows.Forms.Label()
+        Me.txtStaffID = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.Label15 = New System.Windows.Forms.Label()
-        Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.txtDesignation = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.Panel15 = New System.Windows.Forms.Panel()
@@ -53,8 +53,7 @@ Partial Class Staff
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
-        Me.Panel5 = New System.Windows.Forms.Panel()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
         Me.Label3 = New System.Windows.Forms.Label()
@@ -68,13 +67,16 @@ Partial Class Staff
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.Button11 = New System.Windows.Forms.Button()
-        Me.Button10 = New System.Windows.Forms.Button()
-        Me.Button9 = New System.Windows.Forms.Button()
+        Me.btnClose = New System.Windows.Forms.Button()
+        Me.btnMaximize = New System.Windows.Forms.Button()
+        Me.btnMinimize = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
-        Me.Label2 = New System.Windows.Forms.Label()
+        Me.lblUser = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.OpenFD = New System.Windows.Forms.OpenFileDialog()
+        Me.picboxProfile = New System.Windows.Forms.PictureBox()
+        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         Me.Panel15.SuspendLayout()
@@ -85,6 +87,7 @@ Partial Class Staff
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
+        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'DataGridView1
@@ -97,140 +100,140 @@ Partial Class Staff
         Me.DataGridView1.Size = New System.Drawing.Size(1058, 171)
         Me.DataGridView1.TabIndex = 16
         '
-        'RadioButton2
+        'rbnFemale
         '
-        Me.RadioButton2.AutoSize = True
-        Me.RadioButton2.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RadioButton2.Location = New System.Drawing.Point(287, 230)
-        Me.RadioButton2.Name = "RadioButton2"
-        Me.RadioButton2.Size = New System.Drawing.Size(95, 32)
-        Me.RadioButton2.TabIndex = 14
-        Me.RadioButton2.TabStop = True
-        Me.RadioButton2.Text = "Female"
-        Me.RadioButton2.UseVisualStyleBackColor = True
+        Me.rbnFemale.AutoSize = True
+        Me.rbnFemale.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.rbnFemale.Location = New System.Drawing.Point(287, 230)
+        Me.rbnFemale.Name = "rbnFemale"
+        Me.rbnFemale.Size = New System.Drawing.Size(95, 32)
+        Me.rbnFemale.TabIndex = 14
+        Me.rbnFemale.TabStop = True
+        Me.rbnFemale.Text = "Female"
+        Me.rbnFemale.UseVisualStyleBackColor = True
         '
-        'RadioButton1
+        'rbnMale
         '
-        Me.RadioButton1.AutoSize = True
-        Me.RadioButton1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.RadioButton1.Location = New System.Drawing.Point(177, 230)
-        Me.RadioButton1.Name = "RadioButton1"
-        Me.RadioButton1.Size = New System.Drawing.Size(76, 32)
-        Me.RadioButton1.TabIndex = 15
-        Me.RadioButton1.TabStop = True
-        Me.RadioButton1.Text = "Male"
-        Me.RadioButton1.UseVisualStyleBackColor = True
+        Me.rbnMale.AutoSize = True
+        Me.rbnMale.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.rbnMale.Location = New System.Drawing.Point(177, 230)
+        Me.rbnMale.Name = "rbnMale"
+        Me.rbnMale.Size = New System.Drawing.Size(76, 32)
+        Me.rbnMale.TabIndex = 15
+        Me.rbnMale.TabStop = True
+        Me.rbnMale.Text = "Male"
+        Me.rbnMale.UseVisualStyleBackColor = True
         '
-        'Button17
+        'btnDelete
         '
-        Me.Button17.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button17.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button17.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button17.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button17.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button17.Location = New System.Drawing.Point(650, 356)
-        Me.Button17.Name = "Button17"
-        Me.Button17.Size = New System.Drawing.Size(158, 39)
-        Me.Button17.TabIndex = 10
-        Me.Button17.Text = "Delete"
-        Me.Button17.UseVisualStyleBackColor = False
+        Me.btnDelete.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnDelete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDelete.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnDelete.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnDelete.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDelete.Location = New System.Drawing.Point(650, 356)
+        Me.btnDelete.Name = "btnDelete"
+        Me.btnDelete.Size = New System.Drawing.Size(158, 39)
+        Me.btnDelete.TabIndex = 10
+        Me.btnDelete.Text = "Delete"
+        Me.btnDelete.UseVisualStyleBackColor = False
         '
-        'Button15
+        'btnEdit
         '
-        Me.Button15.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button15.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button15.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button15.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button15.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button15.Location = New System.Drawing.Point(268, 356)
-        Me.Button15.Name = "Button15"
-        Me.Button15.Size = New System.Drawing.Size(158, 39)
-        Me.Button15.TabIndex = 10
-        Me.Button15.Text = "Edit"
-        Me.Button15.UseVisualStyleBackColor = False
+        Me.btnEdit.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnEdit.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnEdit.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnEdit.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnEdit.Location = New System.Drawing.Point(268, 356)
+        Me.btnEdit.Name = "btnEdit"
+        Me.btnEdit.Size = New System.Drawing.Size(158, 39)
+        Me.btnEdit.TabIndex = 10
+        Me.btnEdit.Text = "Edit"
+        Me.btnEdit.UseVisualStyleBackColor = False
         '
-        'Button16
+        'btnUpdate
         '
-        Me.Button16.BackColor = System.Drawing.Color.Blue
-        Me.Button16.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button16.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button16.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button16.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
-        Me.Button16.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button16.Location = New System.Drawing.Point(459, 356)
-        Me.Button16.Name = "Button16"
-        Me.Button16.Size = New System.Drawing.Size(158, 39)
-        Me.Button16.TabIndex = 10
-        Me.Button16.Text = "Update"
-        Me.Button16.UseVisualStyleBackColor = False
+        Me.btnUpdate.BackColor = System.Drawing.Color.Blue
+        Me.btnUpdate.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUpdate.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnUpdate.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnUpdate.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
+        Me.btnUpdate.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUpdate.Location = New System.Drawing.Point(459, 356)
+        Me.btnUpdate.Name = "btnUpdate"
+        Me.btnUpdate.Size = New System.Drawing.Size(158, 39)
+        Me.btnUpdate.TabIndex = 10
+        Me.btnUpdate.Text = "Update"
+        Me.btnUpdate.UseVisualStyleBackColor = False
         '
-        'Button14
+        'btnAdd
         '
-        Me.Button14.BackColor = System.Drawing.Color.Blue
-        Me.Button14.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button14.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button14.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button14.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
-        Me.Button14.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button14.Location = New System.Drawing.Point(45, 356)
-        Me.Button14.Name = "Button14"
-        Me.Button14.Size = New System.Drawing.Size(190, 39)
-        Me.Button14.TabIndex = 10
-        Me.Button14.Text = "Add Records"
-        Me.Button14.UseVisualStyleBackColor = False
+        Me.btnAdd.BackColor = System.Drawing.Color.Blue
+        Me.btnAdd.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAdd.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnAdd.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.btnAdd.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
+        Me.btnAdd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAdd.Location = New System.Drawing.Point(45, 356)
+        Me.btnAdd.Name = "btnAdd"
+        Me.btnAdd.Size = New System.Drawing.Size(190, 39)
+        Me.btnAdd.TabIndex = 10
+        Me.btnAdd.Text = "Add Records"
+        Me.btnAdd.UseVisualStyleBackColor = False
         '
-        'Button13
+        'txtReset
         '
-        Me.Button13.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
-        Me.Button13.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button13.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button13.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button13.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button13.Location = New System.Drawing.Point(842, 305)
-        Me.Button13.Name = "Button13"
-        Me.Button13.Size = New System.Drawing.Size(158, 39)
-        Me.Button13.TabIndex = 10
-        Me.Button13.Text = "Reset"
-        Me.Button13.UseVisualStyleBackColor = False
+        Me.txtReset.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.txtReset.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtReset.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.txtReset.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtReset.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtReset.Location = New System.Drawing.Point(842, 305)
+        Me.txtReset.Name = "txtReset"
+        Me.txtReset.Size = New System.Drawing.Size(158, 39)
+        Me.txtReset.TabIndex = 10
+        Me.txtReset.Text = "Reset"
+        Me.txtReset.UseVisualStyleBackColor = False
         '
-        'Button12
+        'txtPrint
         '
-        Me.Button12.BackColor = System.Drawing.Color.Blue
-        Me.Button12.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button12.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button12.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.Button12.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
-        Me.Button12.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button12.Location = New System.Drawing.Point(842, 260)
-        Me.Button12.Name = "Button12"
-        Me.Button12.Size = New System.Drawing.Size(158, 39)
-        Me.Button12.TabIndex = 10
-        Me.Button12.Text = "Print"
-        Me.Button12.UseVisualStyleBackColor = False
+        Me.txtPrint.BackColor = System.Drawing.Color.Blue
+        Me.txtPrint.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.txtPrint.Font = New System.Drawing.Font("Segoe UI", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.txtPrint.ForeColor = System.Drawing.SystemColors.ControlLightLight
+        Me.txtPrint.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_print_301
+        Me.txtPrint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.txtPrint.Location = New System.Drawing.Point(842, 260)
+        Me.txtPrint.Name = "txtPrint"
+        Me.txtPrint.Size = New System.Drawing.Size(158, 39)
+        Me.txtPrint.TabIndex = 10
+        Me.txtPrint.Text = "Print"
+        Me.txtPrint.UseVisualStyleBackColor = False
         '
-        'TextBox4
+        'txtPhone
         '
-        Me.TextBox4.Location = New System.Drawing.Point(171, 302)
-        Me.TextBox4.Multiline = True
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox4.TabIndex = 8
+        Me.txtPhone.Location = New System.Drawing.Point(171, 302)
+        Me.txtPhone.Multiline = True
+        Me.txtPhone.Name = "txtPhone"
+        Me.txtPhone.Size = New System.Drawing.Size(198, 34)
+        Me.txtPhone.TabIndex = 8
         '
-        'TextBox7
+        'txtSearch
         '
-        Me.TextBox7.Location = New System.Drawing.Point(913, 364)
-        Me.TextBox7.Multiline = True
-        Me.TextBox7.Name = "TextBox7"
-        Me.TextBox7.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox7.TabIndex = 8
+        Me.txtSearch.Location = New System.Drawing.Point(913, 364)
+        Me.txtSearch.Multiline = True
+        Me.txtSearch.Name = "txtSearch"
+        Me.txtSearch.Size = New System.Drawing.Size(198, 34)
+        Me.txtSearch.TabIndex = 8
         '
-        'TextBox6
+        'txtAddress
         '
-        Me.TextBox6.Location = New System.Drawing.Point(588, 239)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox6.TabIndex = 8
+        Me.txtAddress.Location = New System.Drawing.Point(588, 239)
+        Me.txtAddress.Multiline = True
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(198, 34)
+        Me.txtAddress.TabIndex = 8
         '
         'Label5
         '
@@ -248,17 +251,17 @@ Partial Class Staff
         Me.Label9.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Label9.Location = New System.Drawing.Point(459, 302)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(135, 31)
+        Me.Label9.Size = New System.Drawing.Size(137, 31)
         Me.Label9.TabIndex = 7
-        Me.Label9.Text = "Designaion "
+        Me.Label9.Text = "Designation"
         '
-        'TextBox3
+        'txtLastName
         '
-        Me.TextBox3.Location = New System.Drawing.Point(588, 164)
-        Me.TextBox3.Multiline = True
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox3.TabIndex = 8
+        Me.txtLastName.Location = New System.Drawing.Point(588, 164)
+        Me.txtLastName.Multiline = True
+        Me.txtLastName.Name = "txtLastName"
+        Me.txtLastName.Size = New System.Drawing.Size(198, 34)
+        Me.txtLastName.TabIndex = 8
         '
         'Panel11
         '
@@ -302,23 +305,23 @@ Partial Class Staff
         Me.Label11.TabIndex = 7
         Me.Label11.Text = "Adress"
         '
-        'Label7
+        'lable
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.Location = New System.Drawing.Point(42, 296)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(78, 31)
-        Me.Label7.TabIndex = 7
-        Me.Label7.Text = "Phone"
+        Me.lable.AutoSize = True
+        Me.lable.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
+        Me.lable.Location = New System.Drawing.Point(42, 296)
+        Me.lable.Name = "lable"
+        Me.lable.Size = New System.Drawing.Size(78, 31)
+        Me.lable.TabIndex = 7
+        Me.lable.Text = "Phone"
         '
-        'TextBox1
+        'txtStaffID
         '
-        Me.TextBox1.Location = New System.Drawing.Point(171, 95)
-        Me.TextBox1.Multiline = True
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox1.TabIndex = 8
+        Me.txtStaffID.Location = New System.Drawing.Point(171, 95)
+        Me.txtStaffID.Multiline = True
+        Me.txtStaffID.Name = "txtStaffID"
+        Me.txtStaffID.Size = New System.Drawing.Size(198, 34)
+        Me.txtStaffID.TabIndex = 8
         '
         'Label8
         '
@@ -341,13 +344,13 @@ Partial Class Staff
         Me.Label15.TabIndex = 7
         Me.Label15.Text = "Search"
         '
-        'TextBox5
+        'txtDesignation
         '
-        Me.TextBox5.Location = New System.Drawing.Point(588, 303)
-        Me.TextBox5.Multiline = True
-        Me.TextBox5.Name = "TextBox5"
-        Me.TextBox5.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox5.TabIndex = 8
+        Me.txtDesignation.Location = New System.Drawing.Point(588, 303)
+        Me.txtDesignation.Multiline = True
+        Me.txtDesignation.Name = "txtDesignation"
+        Me.txtDesignation.Size = New System.Drawing.Size(198, 34)
+        Me.txtDesignation.TabIndex = 8
         '
         'Label6
         '
@@ -415,30 +418,31 @@ Partial Class Staff
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.FlowLayoutPanel1)
+        Me.Panel3.Controls.Add(Me.picboxProfile)
         Me.Panel3.Controls.Add(Me.DataGridView1)
-        Me.Panel3.Controls.Add(Me.RadioButton2)
-        Me.Panel3.Controls.Add(Me.RadioButton1)
-        Me.Panel3.Controls.Add(Me.Button17)
-        Me.Panel3.Controls.Add(Me.Button15)
-        Me.Panel3.Controls.Add(Me.Button16)
-        Me.Panel3.Controls.Add(Me.Button14)
-        Me.Panel3.Controls.Add(Me.Button13)
-        Me.Panel3.Controls.Add(Me.Button12)
-        Me.Panel3.Controls.Add(Me.Panel5)
-        Me.Panel3.Controls.Add(Me.TextBox4)
-        Me.Panel3.Controls.Add(Me.TextBox7)
-        Me.Panel3.Controls.Add(Me.TextBox6)
-        Me.Panel3.Controls.Add(Me.TextBox2)
+        Me.Panel3.Controls.Add(Me.rbnFemale)
+        Me.Panel3.Controls.Add(Me.rbnMale)
+        Me.Panel3.Controls.Add(Me.btnDelete)
+        Me.Panel3.Controls.Add(Me.btnEdit)
+        Me.Panel3.Controls.Add(Me.btnUpdate)
+        Me.Panel3.Controls.Add(Me.btnAdd)
+        Me.Panel3.Controls.Add(Me.txtReset)
+        Me.Panel3.Controls.Add(Me.txtPrint)
+        Me.Panel3.Controls.Add(Me.txtPhone)
+        Me.Panel3.Controls.Add(Me.txtSearch)
+        Me.Panel3.Controls.Add(Me.txtAddress)
+        Me.Panel3.Controls.Add(Me.txtFirstName)
         Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.Label11)
-        Me.Panel3.Controls.Add(Me.Label7)
-        Me.Panel3.Controls.Add(Me.TextBox5)
+        Me.Panel3.Controls.Add(Me.lable)
+        Me.Panel3.Controls.Add(Me.txtDesignation)
         Me.Panel3.Controls.Add(Me.Label5)
         Me.Panel3.Controls.Add(Me.Label9)
-        Me.Panel3.Controls.Add(Me.TextBox3)
+        Me.Panel3.Controls.Add(Me.txtLastName)
         Me.Panel3.Controls.Add(Me.Label6)
-        Me.Panel3.Controls.Add(Me.TextBox1)
+        Me.Panel3.Controls.Add(Me.txtStaffID)
         Me.Panel3.Controls.Add(Me.Label4)
         Me.Panel3.Controls.Add(Me.Panel4)
         Me.Panel3.Controls.Add(Me.Panel15)
@@ -452,23 +456,13 @@ Partial Class Staff
         Me.Panel3.Size = New System.Drawing.Size(1125, 608)
         Me.Panel3.TabIndex = 11
         '
-        'Panel5
+        'txtFirstName
         '
-        Me.Panel5.BackgroundImage = Global.Library_Managemey_System.My.Resources.Resources.icons8_add_image_70
-        Me.Panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.Panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
-        Me.Panel5.Location = New System.Drawing.Point(794, 70)
-        Me.Panel5.Name = "Panel5"
-        Me.Panel5.Size = New System.Drawing.Size(250, 184)
-        Me.Panel5.TabIndex = 9
-        '
-        'TextBox2
-        '
-        Me.TextBox2.Location = New System.Drawing.Point(171, 164)
-        Me.TextBox2.Multiline = True
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(198, 34)
-        Me.TextBox2.TabIndex = 8
+        Me.txtFirstName.Location = New System.Drawing.Point(171, 164)
+        Me.txtFirstName.Multiline = True
+        Me.txtFirstName.Name = "txtFirstName"
+        Me.txtFirstName.Size = New System.Drawing.Size(198, 34)
+        Me.txtFirstName.TabIndex = 8
         '
         'Panel4
         '
@@ -630,43 +624,43 @@ Partial Class Staff
         Me.PictureBox2.TabIndex = 1
         Me.PictureBox2.TabStop = False
         '
-        'Button11
+        'btnClose
         '
-        Me.Button11.BackColor = System.Drawing.Color.Maroon
-        Me.Button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button11.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button11.ForeColor = System.Drawing.Color.White
-        Me.Button11.Location = New System.Drawing.Point(1302, 50)
-        Me.Button11.Name = "Button11"
-        Me.Button11.Size = New System.Drawing.Size(55, 40)
-        Me.Button11.TabIndex = 3
-        Me.Button11.Text = "X"
-        Me.Button11.UseVisualStyleBackColor = False
+        Me.btnClose.BackColor = System.Drawing.Color.Maroon
+        Me.btnClose.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnClose.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnClose.ForeColor = System.Drawing.Color.White
+        Me.btnClose.Location = New System.Drawing.Point(1302, 50)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(55, 40)
+        Me.btnClose.TabIndex = 3
+        Me.btnClose.Text = "X"
+        Me.btnClose.UseVisualStyleBackColor = False
         '
-        'Button10
+        'btnMaximize
         '
-        Me.Button10.BackColor = System.Drawing.Color.DodgerBlue
-        Me.Button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button10.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button10.ForeColor = System.Drawing.Color.White
-        Me.Button10.Location = New System.Drawing.Point(1241, 50)
-        Me.Button10.Name = "Button10"
-        Me.Button10.Size = New System.Drawing.Size(55, 40)
-        Me.Button10.TabIndex = 3
-        Me.Button10.Text = "O"
-        Me.Button10.UseVisualStyleBackColor = False
+        Me.btnMaximize.BackColor = System.Drawing.Color.DodgerBlue
+        Me.btnMaximize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMaximize.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnMaximize.ForeColor = System.Drawing.Color.White
+        Me.btnMaximize.Location = New System.Drawing.Point(1241, 50)
+        Me.btnMaximize.Name = "btnMaximize"
+        Me.btnMaximize.Size = New System.Drawing.Size(55, 40)
+        Me.btnMaximize.TabIndex = 3
+        Me.btnMaximize.Text = "O"
+        Me.btnMaximize.UseVisualStyleBackColor = False
         '
-        'Button9
+        'btnMinimize
         '
-        Me.Button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button9.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Button9.ForeColor = System.Drawing.Color.White
-        Me.Button9.Location = New System.Drawing.Point(1180, 50)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(55, 40)
-        Me.Button9.TabIndex = 3
-        Me.Button9.Text = "-"
-        Me.Button9.UseVisualStyleBackColor = True
+        Me.btnMinimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnMinimize.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.btnMinimize.ForeColor = System.Drawing.Color.White
+        Me.btnMinimize.Location = New System.Drawing.Point(1180, 50)
+        Me.btnMinimize.Name = "btnMinimize"
+        Me.btnMinimize.Size = New System.Drawing.Size(55, 40)
+        Me.btnMinimize.TabIndex = 3
+        Me.btnMinimize.Text = "-"
+        Me.btnMinimize.UseVisualStyleBackColor = True
         '
         'PictureBox1
         '
@@ -678,15 +672,15 @@ Partial Class Staff
         Me.PictureBox1.TabIndex = 2
         Me.PictureBox1.TabStop = False
         '
-        'Label2
+        'lblUser
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.ForeColor = System.Drawing.Color.White
-        Me.Label2.Location = New System.Drawing.Point(1052, 63)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(77, 20)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Welcome.."
+        Me.lblUser.AutoSize = True
+        Me.lblUser.ForeColor = System.Drawing.Color.White
+        Me.lblUser.Location = New System.Drawing.Point(1052, 63)
+        Me.lblUser.Name = "lblUser"
+        Me.lblUser.Size = New System.Drawing.Size(77, 20)
+        Me.lblUser.TabIndex = 1
+        Me.lblUser.Text = "Welcome.."
         '
         'Label1
         '
@@ -703,17 +697,38 @@ Partial Class Staff
         '
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.Controls.Add(Me.PictureBox2)
-        Me.Panel1.Controls.Add(Me.Button11)
-        Me.Panel1.Controls.Add(Me.Button10)
-        Me.Panel1.Controls.Add(Me.Button9)
+        Me.Panel1.Controls.Add(Me.btnClose)
+        Me.Panel1.Controls.Add(Me.btnMaximize)
+        Me.Panel1.Controls.Add(Me.btnMinimize)
         Me.Panel1.Controls.Add(Me.PictureBox1)
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.lblUser)
         Me.Panel1.Controls.Add(Me.Label1)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Top
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(1360, 125)
         Me.Panel1.TabIndex = 9
+        '
+        'OpenFD
+        '
+        Me.OpenFD.FileName = "OpenFileDialog1"
+        '
+        'picboxProfile
+        '
+        Me.picboxProfile.BackgroundImage = Global.Library_Managemey_System.My.Resources.Resources.icons8_add_image_70
+        Me.picboxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picboxProfile.Location = New System.Drawing.Point(814, 95)
+        Me.picboxProfile.Name = "picboxProfile"
+        Me.picboxProfile.Size = New System.Drawing.Size(225, 132)
+        Me.picboxProfile.TabIndex = 17
+        Me.picboxProfile.TabStop = False
+        '
+        'FlowLayoutPanel1
+        '
+        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(280, 279)
+        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
+        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(11, 26)
+        Me.FlowLayoutPanel1.TabIndex = 18
         '
         'Staff
         '
@@ -742,34 +757,35 @@ Partial Class Staff
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
+        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents DataGridView1 As DataGridView
-    Friend WithEvents RadioButton2 As RadioButton
-    Friend WithEvents RadioButton1 As RadioButton
-    Friend WithEvents Button17 As Button
-    Friend WithEvents Button15 As Button
-    Friend WithEvents Button16 As Button
-    Friend WithEvents Button14 As Button
-    Friend WithEvents Button13 As Button
-    Friend WithEvents Button12 As Button
-    Friend WithEvents TextBox4 As TextBox
-    Friend WithEvents TextBox7 As TextBox
-    Friend WithEvents TextBox6 As TextBox
+    Friend WithEvents rbnFemale As RadioButton
+    Friend WithEvents rbnMale As RadioButton
+    Friend WithEvents btnDelete As Button
+    Friend WithEvents btnEdit As Button
+    Friend WithEvents btnUpdate As Button
+    Friend WithEvents btnAdd As Button
+    Friend WithEvents txtReset As Button
+    Friend WithEvents txtPrint As Button
+    Friend WithEvents txtPhone As TextBox
+    Friend WithEvents txtSearch As TextBox
+    Friend WithEvents txtAddress As TextBox
     Friend WithEvents Label5 As Label
     Friend WithEvents Label9 As Label
-    Friend WithEvents TextBox3 As TextBox
+    Friend WithEvents txtLastName As TextBox
     Friend WithEvents Panel11 As Panel
     Friend WithEvents Label10 As Label
     Friend WithEvents Label13 As Label
     Friend WithEvents Label11 As Label
-    Friend WithEvents Label7 As Label
-    Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents lable As Label
+    Friend WithEvents txtStaffID As TextBox
     Friend WithEvents Label8 As Label
     Friend WithEvents Label15 As Label
-    Friend WithEvents TextBox5 As TextBox
+    Friend WithEvents txtDesignation As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
     Friend WithEvents Panel15 As Panel
@@ -777,8 +793,7 @@ Partial Class Staff
     Friend WithEvents Panel13 As Panel
     Friend WithEvents Label12 As Label
     Friend WithEvents Panel3 As Panel
-    Friend WithEvents Panel5 As Panel
-    Friend WithEvents TextBox2 As TextBox
+    Friend WithEvents txtFirstName As TextBox
     Friend WithEvents Panel4 As Panel
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label3 As Label
@@ -792,11 +807,14 @@ Partial Class Staff
     Friend WithEvents Button2 As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents PictureBox2 As PictureBox
-    Friend WithEvents Button11 As Button
-    Friend WithEvents Button10 As Button
-    Friend WithEvents Button9 As Button
+    Friend WithEvents btnClose As Button
+    Friend WithEvents btnMaximize As Button
+    Friend WithEvents btnMinimize As Button
     Friend WithEvents PictureBox1 As PictureBox
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblUser As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents Panel1 As Panel
+    Friend WithEvents OpenFD As OpenFileDialog
+    Friend WithEvents picboxProfile As PictureBox
+    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class
