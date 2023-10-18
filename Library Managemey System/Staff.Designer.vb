@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Staff
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,9 +20,9 @@ Partial Class Staff
     'NOTE: The following procedure is required by the Windows Form Designer
     'It can be modified using the Windows Form Designer.  
     'Do not modify it using the code editor.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dvgStaffTable = New System.Windows.Forms.DataGridView()
         Me.rbnFemale = New System.Windows.Forms.RadioButton()
         Me.rbnMale = New System.Windows.Forms.RadioButton()
         Me.btnDelete = New System.Windows.Forms.Button()
@@ -53,6 +53,7 @@ Partial Class Staff
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.picboxProfile = New System.Windows.Forms.PictureBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
         Me.Panel9 = New System.Windows.Forms.Panel()
@@ -75,30 +76,28 @@ Partial Class Staff
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.OpenFD = New System.Windows.Forms.OpenFileDialog()
-        Me.picboxProfile = New System.Windows.Forms.PictureBox()
-        Me.FlowLayoutPanel1 = New System.Windows.Forms.FlowLayoutPanel()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         Me.Panel15.SuspendLayout()
         Me.Panel13.SuspendLayout()
         Me.Panel3.SuspendLayout()
+        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel9.SuspendLayout()
         Me.Panel2.SuspendLayout()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
-        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'DataGridView1
+        'dvgStaffTable
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(42, 431)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.RowHeadersWidth = 51
-        Me.DataGridView1.RowTemplate.Height = 29
-        Me.DataGridView1.Size = New System.Drawing.Size(1058, 171)
-        Me.DataGridView1.TabIndex = 16
+        Me.dvgStaffTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dvgStaffTable.Location = New System.Drawing.Point(42, 431)
+        Me.dvgStaffTable.Name = "dvgStaffTable"
+        Me.dvgStaffTable.RowHeadersWidth = 51
+        Me.dvgStaffTable.RowTemplate.Height = 29
+        Me.dvgStaffTable.Size = New System.Drawing.Size(1058, 171)
+        Me.dvgStaffTable.TabIndex = 16
         '
         'rbnFemale
         '
@@ -418,9 +417,8 @@ Partial Class Staff
         '
         'Panel3
         '
-        Me.Panel3.Controls.Add(Me.FlowLayoutPanel1)
         Me.Panel3.Controls.Add(Me.picboxProfile)
-        Me.Panel3.Controls.Add(Me.DataGridView1)
+        Me.Panel3.Controls.Add(Me.dvgStaffTable)
         Me.Panel3.Controls.Add(Me.rbnFemale)
         Me.Panel3.Controls.Add(Me.rbnMale)
         Me.Panel3.Controls.Add(Me.btnDelete)
@@ -455,6 +453,16 @@ Partial Class Staff
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1125, 608)
         Me.Panel3.TabIndex = 11
+        '
+        'picboxProfile
+        '
+        Me.picboxProfile.BackgroundImage = Global.Library_Managemey_System.My.Resources.Resources.icons8_add_image_70
+        Me.picboxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.picboxProfile.Location = New System.Drawing.Point(814, 95)
+        Me.picboxProfile.Name = "picboxProfile"
+        Me.picboxProfile.Size = New System.Drawing.Size(225, 132)
+        Me.picboxProfile.TabIndex = 17
+        Me.picboxProfile.TabStop = False
         '
         'txtFirstName
         '
@@ -713,23 +721,6 @@ Partial Class Staff
         '
         Me.OpenFD.FileName = "OpenFileDialog1"
         '
-        'picboxProfile
-        '
-        Me.picboxProfile.BackgroundImage = Global.Library_Managemey_System.My.Resources.Resources.icons8_add_image_70
-        Me.picboxProfile.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.picboxProfile.Location = New System.Drawing.Point(814, 95)
-        Me.picboxProfile.Name = "picboxProfile"
-        Me.picboxProfile.Size = New System.Drawing.Size(225, 132)
-        Me.picboxProfile.TabIndex = 17
-        Me.picboxProfile.TabStop = False
-        '
-        'FlowLayoutPanel1
-        '
-        Me.FlowLayoutPanel1.Location = New System.Drawing.Point(280, 279)
-        Me.FlowLayoutPanel1.Name = "FlowLayoutPanel1"
-        Me.FlowLayoutPanel1.Size = New System.Drawing.Size(11, 26)
-        Me.FlowLayoutPanel1.TabIndex = 18
-        '
         'Staff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -741,7 +732,7 @@ Partial Class Staff
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Staff"
         Me.Text = "Staff"
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel11.ResumeLayout(False)
         Me.Panel11.PerformLayout()
         Me.Panel15.ResumeLayout(False)
@@ -750,6 +741,7 @@ Partial Class Staff
         Me.Panel13.PerformLayout()
         Me.Panel3.ResumeLayout(False)
         Me.Panel3.PerformLayout()
+        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel9.ResumeLayout(False)
         Me.Panel9.PerformLayout()
         Me.Panel2.ResumeLayout(False)
@@ -757,12 +749,11 @@ Partial Class Staff
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)
         Me.Panel1.PerformLayout()
-        CType(Me.picboxProfile, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dvgStaffTable As DataGridView
     Friend WithEvents rbnFemale As RadioButton
     Friend WithEvents rbnMale As RadioButton
     Friend WithEvents btnDelete As Button
@@ -816,5 +807,4 @@ Partial Class Staff
     Friend WithEvents Panel1 As Panel
     Friend WithEvents OpenFD As OpenFileDialog
     Friend WithEvents picboxProfile As PictureBox
-    Friend WithEvents FlowLayoutPanel1 As FlowLayoutPanel
 End Class

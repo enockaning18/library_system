@@ -1,5 +1,7 @@
 ﻿Imports System.DateTime
 Imports System.Data.SqlClient
+Imports System.IO
+
 Public Class Staff
     Dim dbconn = New SqlConnection("Data Source=.;Initial Catalog=LMS;Integrated Security=True")
     Private Sub Label11_Click(sender As Object, e As EventArgs) Handles Label11.Click
@@ -54,7 +56,7 @@ Public Class Staff
         OpenFD.Filter = "Choose Image(*.JPG; *.PNG; *.JPEG; *.GIF) |  *.JPG; *.PNG; *.JPEG; *.GIF"
 
         If OpenFD.ShowDialog = Windows.Forms.DialogResult.OK Then
-            picboxProfile.Image.FromFile(OpenFD.FileName)
+            picboxProfile.Image = Image.FromFile(OpenFD.FileName)
         End If
     End Sub
 
@@ -71,14 +73,77 @@ Public Class Staff
     End Sub
 
     Private Sub btnAdd_Click(sender As Object, e As EventArgs) Handles btnAdd.Click
-        Dim querryCommand As New SqlCommand("INSERT INTO Staff(FirstName, LastName, Gender, Address, Designation, Phone, profileImage VALUES(@FirstName, @LastName, @Gender, @Address, @Designation, @Phone, @profileImage)", dbconn)
+        Dim querryCommand As New SqlCommand("INSERT INTO Staff(FirstName, LastName, Gender, Address, Designation, Phone, profileImage) VALUES(@FirstName, @LastName, @Gender, @Address, @Designation, @Phone, @profileImage)", dbconn)
+
         'get values from fields into variables 
-        Dim FirstName As String = FirstName
-        Dim LastName As String = LastName
-        Dim Gender As String = Gender
-        Dim Address As String = Address
-        Dim Designation As String = Designation
-        Dim Phone As String = Phone
+        Dim FirstName As String = txtFirstName.Text
+        Dim LastName As String = txtLastName.Text
+        Dim Gender As String
+        Dim Address As String = txtAddress.Text
+        Dim Designation As String = txtDesignation.Text
+        Dim Phone As String = txtPhone.Text
+
+
+
         Dim profileImage As New MemoryStream
+        'store picture into vatiable 
+        picboxProfile.Image.Save(profileImage, picboxProfile.Image.RawFormat)
+
+
+        If rbnMale.Checked = True Then
+            Gender = "Male"
+        Else
+            Gender = "Female"
+        End If
+
+        querryCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
+        querryCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = LastName
+        querryCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = Gender
+        querryCommand.Parameters.Add("@Address", SqlDbType.VarChar).Value = Address
+        querryCommand.Parameters.Add("@Designation", SqlDbType.VarChar).Value = Designation
+        querryCommand.Parameters.Add("@Phone", SqlDbType.VarChar).Value = Phone
+        querryCommand.Parameters.Add("@ProfileImage", SqlDbType.Image).Value = profileImage.ToArray
+
+        'open database 
+        dbconn.Open()
+        If querryCommand.ExecuteNonQuery() = 1 Then
+            MessageBox.Show("New Staff Successfully", "New Staff ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            FetchStaffData()
+        Else
+            MessageBox.Show("Fail to add new staf", "New Staff ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
+        End If
+        dbconn.Close()
+
+        Reset()
+
+    End Sub
+
+    Private Sub picboxProfile_Click(sender As Object, e As EventArgs) Handles picboxProfile.Click
+        Dim OpenFD = New OpenFileDialog
+
+        OpenFD.Filter = "Choose Image(*.JPG; *.PNG; *.JPEG; *.GIF) |  *.JPG; *.PNG; *.JPEG; *.GIF"
+
+        If OpenFD.ShowDialog = Windows.Forms.DialogResult.OK Then
+            picboxProfile.Image = Image.FromFile(OpenFD.FileName)
+        End If
+    End Sub
+
+    'method to fetch data from database 
+    Public Sub FetchStaffData()
+        Dim querryCommand As New SqlCommand("SELECT * FROM Staff", dbconn)
+        Dim adapter As New SqlDataAdapter(querryCommand)
+        Dim table As New DataTable
+
+        'Fill records from data table 
+        adapter.Fill(table)
+        dvgStaffTable.DataSource = table
+
+
+
+
+    End Sub
+
+    Private Sub Staff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        FetchStaffData()
     End Sub
 End Class
