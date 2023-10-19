@@ -84,35 +84,46 @@ Public Class Staff
         Dim Phone As String = txtPhone.Text
 
 
+        Try
+            Dim profileImage As New MemoryStream
+            'store picture into vatiable 
+            picboxProfile.Image.Save(profileImage, picboxProfile.Image.RawFormat)
 
-        Dim profileImage As New MemoryStream
-        'store picture into vatiable 
-        picboxProfile.Image.Save(profileImage, picboxProfile.Image.RawFormat)
+            If picboxProfile.Image Is Nothing Then
+                MessageBox.Show("Please select a image", "Image", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            End If
 
 
-        If rbnMale.Checked = True Then
-            Gender = "Male"
-        Else
-            Gender = "Female"
-        End If
+            If rbnMale.Checked = True Then
+                Gender = "Male"
+            Else
+                Gender = "Female"
+            End If
 
-        querryCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
-        querryCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = LastName
-        querryCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = Gender
-        querryCommand.Parameters.Add("@Address", SqlDbType.VarChar).Value = Address
-        querryCommand.Parameters.Add("@Designation", SqlDbType.VarChar).Value = Designation
-        querryCommand.Parameters.Add("@Phone", SqlDbType.VarChar).Value = Phone
-        querryCommand.Parameters.Add("@ProfileImage", SqlDbType.Image).Value = profileImage.ToArray
 
-        'open database 
-        dbconn.Open()
-        If querryCommand.ExecuteNonQuery() = 1 Then
-            MessageBox.Show("New Staff Successfully", "New Staff ", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            FetchStaffData()
-        Else
-            MessageBox.Show("Fail to add new staf", "New Staff ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
-        End If
-        dbconn.Close()
+
+            querryCommand.Parameters.Add("@FirstName", SqlDbType.VarChar).Value = FirstName
+            querryCommand.Parameters.Add("@LastName", SqlDbType.VarChar).Value = LastName
+            querryCommand.Parameters.Add("@Gender", SqlDbType.VarChar).Value = Gender
+            querryCommand.Parameters.Add("@Address", SqlDbType.VarChar).Value = Address
+            querryCommand.Parameters.Add("@Designation", SqlDbType.VarChar).Value = Designation
+            querryCommand.Parameters.Add("@Phone", SqlDbType.VarChar).Value = Phone
+            querryCommand.Parameters.Add("@ProfileImage", SqlDbType.Image).Value = profileImage.ToArray
+
+            'open database 
+            dbconn.Open()
+            If querryCommand.ExecuteNonQuery() = 1 Then
+                MessageBox.Show("New Staff Successfully", "New Staff ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                FetchStaffData()
+            Else
+                MessageBox.Show("Fail to add new staf", "New Staff ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
+            End If
+            dbconn.Close()
+
+        Catch ex As Exception
+            MessageBox.Show("Error: ")
+        End Try
+
 
         Reset()
 
@@ -145,5 +156,33 @@ Public Class Staff
 
     Private Sub Staff_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         FetchStaffData()
+    End Sub
+
+    Private Sub txtSearch_TextChanged(sender As Object, e As EventArgs) Handles txtSearch.TextChanged
+
+    End Sub
+
+    Private Sub txtSearch_Enter(sender As Object, e As EventArgs) Handles txtSearch.Enter
+
+
+
+    End Sub
+
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Dim searchValue As String = txtSearch.Text
+
+        Dim querryCommand As New SqlCommand("SELECT * FROM Staff WHERE Staff_ID LIKE '" + searchValue + "' OR FirstName LIKE '" + searchValue + "' OR Phone LIKE '" + searchValue + "' OR Gender LIKE '" + searchValue + "' OR Phone Like '" + searchValue + "'", dbconn)
+        'table adaper 
+        Dim adapter As New SqlDataAdapter(querryCommand)
+        Dim table As New DataTable
+        adapter.Fill(table)
+        dvgStaffTable.DataSource = table
+
+        'check if there was a record match 
+        If table.Rows.Count > 0 Then
+            MessageBox.Show("Recod Found", "Seach", MessageBoxButtons.OK, MessageBoxIcon.Information)
+        Else
+            MessageBox.Show("Recod Not Found", "Seach", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information)
+        End If
     End Sub
 End Class

@@ -44,7 +44,6 @@ Partial Class Staff
         Me.lable = New System.Windows.Forms.Label()
         Me.txtStaffID = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label15 = New System.Windows.Forms.Label()
         Me.txtDesignation = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
@@ -76,6 +75,7 @@ Partial Class Staff
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.OpenFD = New System.Windows.Forms.OpenFileDialog()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         Me.Panel15.SuspendLayout()
@@ -220,7 +220,7 @@ Partial Class Staff
         '
         'txtSearch
         '
-        Me.txtSearch.Location = New System.Drawing.Point(913, 364)
+        Me.txtSearch.Location = New System.Drawing.Point(817, 356)
         Me.txtSearch.Multiline = True
         Me.txtSearch.Name = "txtSearch"
         Me.txtSearch.Size = New System.Drawing.Size(198, 34)
@@ -333,16 +333,6 @@ Partial Class Staff
         Me.Label8.TabIndex = 0
         Me.Label8.Text = "Total Staff"
         '
-        'Label15
-        '
-        Me.Label15.AutoSize = True
-        Me.Label15.Font = New System.Drawing.Font("Segoe UI", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
-        Me.Label15.Location = New System.Drawing.Point(814, 364)
-        Me.Label15.Name = "Label15"
-        Me.Label15.Size = New System.Drawing.Size(82, 31)
-        Me.Label15.TabIndex = 7
-        Me.Label15.Text = "Search"
-        '
         'txtDesignation
         '
         Me.txtDesignation.Location = New System.Drawing.Point(588, 303)
@@ -417,6 +407,7 @@ Partial Class Staff
         '
         'Panel3
         '
+        Me.Panel3.Controls.Add(Me.LinkLabel1)
         Me.Panel3.Controls.Add(Me.picboxProfile)
         Me.Panel3.Controls.Add(Me.dvgStaffTable)
         Me.Panel3.Controls.Add(Me.rbnFemale)
@@ -431,7 +422,6 @@ Partial Class Staff
         Me.Panel3.Controls.Add(Me.txtSearch)
         Me.Panel3.Controls.Add(Me.txtAddress)
         Me.Panel3.Controls.Add(Me.txtFirstName)
-        Me.Panel3.Controls.Add(Me.Label15)
         Me.Panel3.Controls.Add(Me.Label13)
         Me.Panel3.Controls.Add(Me.Label11)
         Me.Panel3.Controls.Add(Me.lable)
@@ -721,6 +711,18 @@ Partial Class Staff
         '
         Me.OpenFD.FileName = "OpenFileDialog1"
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.Location = New System.Drawing.Point(1025, 360)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(75, 28)
+        Me.LinkLabel1.TabIndex = 18
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Search"
+        '
         'Staff
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 20.0!)
@@ -775,7 +777,6 @@ Partial Class Staff
     Friend WithEvents lable As Label
     Friend WithEvents txtStaffID As TextBox
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label15 As Label
     Friend WithEvents txtDesignation As TextBox
     Friend WithEvents Label6 As Label
     Friend WithEvents Label4 As Label
@@ -807,4 +808,5 @@ Partial Class Staff
     Friend WithEvents Panel1 As Panel
     Friend WithEvents OpenFD As OpenFileDialog
     Friend WithEvents picboxProfile As PictureBox
+    Friend WithEvents LinkLabel1 As LinkLabel
 End Class
