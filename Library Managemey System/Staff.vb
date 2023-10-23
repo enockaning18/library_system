@@ -1,6 +1,7 @@
 ﻿Imports System.DateTime
 Imports System.Data.SqlClient
 Imports System.IO
+Imports System.Drawing.Imaging
 
 Public Class Staff
     Dim dbconn = New SqlConnection("Data Source=.;Initial Catalog=LMS;Integrated Security=True")
@@ -183,6 +184,56 @@ Public Class Staff
             MessageBox.Show("Recod Found", "Seach", MessageBoxButtons.OK, MessageBoxIcon.Information)
         Else
             MessageBox.Show("Recod Not Found", "Seach", MessageBoxButtons.RetryCancel, MessageBoxIcon.Information)
+            FetchStaffData()
         End If
+    End Sub
+
+    Private Sub btnDelete_Click(sender As Object, e As EventArgs) Handles btnDelete.Click
+        Dim search As String = txtSearch.Text
+
+        Dim querryCommand As New SqlCommand("DELETE FROM Staff WHERE Staff_ID = '" + search + "'", dbconn)
+        dbconn.Open()
+        If MessageBox.Show("Do you want to delete?", "Delete Record", MessageBoxButtons.YesNo, MessageBoxIcon.Question) = DialogResult.Yes Then
+            querryCommand.ExecuteNonQuery()
+            FetchStaffData()
+        Else
+            'record will not be delelted 
+            FetchStaffData()
+        End If
+        dbconn.Close()
+
+    End Sub
+
+    Private Sub btnEdit_Click(sender As Object, e As EventArgs) Handles btnEdit.Click
+        Dim Edit As New DataGridViewRow
+        Edit = dvgStaffTable.SelectedRows(0)
+        Dim Gender As String
+
+        txtStaffID.Text = Edit.Cells(0).Value.ToString()
+        txtFirstName.Text = Edit.Cells(1).Value.ToString()
+        txtLastName.Text = Edit.Cells(2).Value.ToString()
+        Gender = Edit.Cells(3).Value.ToString()
+        txtAddress.Text = Edit.Cells(4).Value.ToString()
+        txtDesignation.Text = Edit.Cells(5).Value.ToString()
+        txtPhone.Text = Edit.Cells(6).Value.ToString()
+
+        Dim bytes As Byte() = Edit.Cells(7).Value
+        Dim ms As New MemoryStream(bytes)
+        picboxProfile.Image = Image.FromStream(ms)
+
+
+        If Gender = "Male" Then
+            rbnMale.Checked = True
+
+        ElseIf Gender = "Female" Then
+            rbnFemale.Checked = True
+
+        Else
+            'dont activate any 
+        End If
+    End Sub
+
+    Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
+
     End Sub
 End Class

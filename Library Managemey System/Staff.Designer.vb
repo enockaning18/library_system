@@ -52,6 +52,7 @@ Partial Class Staff
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel3 = New System.Windows.Forms.Panel()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.picboxProfile = New System.Windows.Forms.PictureBox()
         Me.txtFirstName = New System.Windows.Forms.TextBox()
         Me.Panel4 = New System.Windows.Forms.Panel()
@@ -75,7 +76,6 @@ Partial Class Staff
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.OpenFD = New System.Windows.Forms.OpenFileDialog()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel11.SuspendLayout()
         Me.Panel15.SuspendLayout()
@@ -444,6 +444,18 @@ Partial Class Staff
         Me.Panel3.Size = New System.Drawing.Size(1125, 608)
         Me.Panel3.TabIndex = 11
         '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.AutoSize = True
+        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.LinkLabel1.Location = New System.Drawing.Point(1025, 360)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(75, 28)
+        Me.LinkLabel1.TabIndex = 18
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "Search"
+        '
         'picboxProfile
         '
         Me.picboxProfile.BackgroundImage = Global.Library_Managemey_System.My.Resources.Resources.icons8_add_image_70
@@ -710,18 +722,6 @@ Partial Class Staff
         'OpenFD
         '
         Me.OpenFD.FileName = "OpenFileDialog1"
-        '
-        'LinkLabel1
-        '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel1.Location = New System.Drawing.Point(1025, 360)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(75, 28)
-        Me.LinkLabel1.TabIndex = 18
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Search"
         '
         'Staff
         '
