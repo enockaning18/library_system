@@ -235,5 +235,78 @@ Public Class Staff
 
     Private Sub btnUpdate_Click(sender As Object, e As EventArgs) Handles btnUpdate.Click
 
+        Dim FirstName As String = txtFirstName.Text
+        Dim LastName As String = txtLastName.Text
+        Dim Gender As String
+        Dim Address As String = txtAddress.Text
+        Dim Designation As String = txtDesignation.Text
+        Dim Phone As String = txtPhone.Text
+
+        Dim profileImage As New MemoryStream
+        'store picture into vatiable 
+        picboxProfile.Image.Save(profileImage, picboxProfile.Image.RawFormat)
+
+        If rbnMale.Checked = True Then
+            Gender = "Male"
+        Else
+            Gender = "Female"
+        End If
+
+        Dim querryCommand As New SqlCommand("UPDATE Staff SET FirstName = '" + FirstName + "', LastName = '" + LastName + "',Gender = '" + Gender + "',Address = '" + Address + "', Designation = '" + Designation + "', Phone = '" + Phone + "' WHERE Staff_ID = '" + txtStaffID.Text + "'", dbconn)
+        querryCommand.Parameters.Add("@ProfileImage", SqlDbType.Image).Value = profileImage.ToArray
+
+        dbconn.Open()
+        If querryCommand.ExecuteNonQuery() Then
+            MessageBox.Show("Staff Record Updated Successfully", "Update ", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            FetchStaffData()
+            Reset()
+        Else
+            MessageBox.Show("Fail to Update Record", "Update ", MessageBoxButtons.RetryCancel, MessageBoxIcon.Error)
+        End If
+        dbconn.Close()
+
+
+    End Sub
+
+    Private Sub btnDashboard_Click(sender As Object, e As EventArgs) Handles btnDashboard.Click
+        Me.Hide()
+        Dashboard.Show()
+    End Sub
+
+    Private Sub btnBooks_Click(sender As Object, e As EventArgs) Handles btnBooks.Click
+        Me.Hide()
+        Books.Show()
+    End Sub
+
+    Private Sub btnCategory_Click(sender As Object, e As EventArgs) Handles btnCategory.Click
+
+    End Sub
+
+    Private Sub btnStaffs_Click(sender As Object, e As EventArgs) Handles btnStaffs.Click
+        Me.Show()
+    End Sub
+
+    Private Sub btnReaders_Click(sender As Object, e As EventArgs) Handles btnReaders.Click
+        Me.Hide()
+        Readers.Show()
+    End Sub
+
+    Private Sub btnAuthors_Click(sender As Object, e As EventArgs) Handles btnAuthors.Click
+        Me.Hide()
+        Author.Show()
+    End Sub
+
+    Private Sub btnUsers_Click(sender As Object, e As EventArgs) Handles btnUsers.Click
+        Me.Hide()
+        Users.Show()
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs) Handles Button8.Click
+        If MessageBox.Show("Want's to sign out? ", "Sign Out", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question) = DialogResult.Yes Then
+            Me.Hide()
+            Login.Show()
+        Else
+            'stay loged in
+        End If
     End Sub
 End Class

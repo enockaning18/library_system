@@ -60,13 +60,13 @@ Partial Class Staff
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button7 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button6 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
+        Me.btnUsers = New System.Windows.Forms.Button()
+        Me.btnStaffs = New System.Windows.Forms.Button()
+        Me.btnAuthors = New System.Windows.Forms.Button()
+        Me.btnCategory = New System.Windows.Forms.Button()
+        Me.btnReaders = New System.Windows.Forms.Button()
+        Me.btnBooks = New System.Windows.Forms.Button()
+        Me.btnDashboard = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.btnMaximize = New System.Windows.Forms.Button()
@@ -91,9 +91,12 @@ Partial Class Staff
         '
         'dvgStaffTable
         '
+        Me.dvgStaffTable.AllowUserToAddRows = False
+        Me.dvgStaffTable.AllowUserToDeleteRows = False
         Me.dvgStaffTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dvgStaffTable.Location = New System.Drawing.Point(42, 431)
         Me.dvgStaffTable.Name = "dvgStaffTable"
+        Me.dvgStaffTable.ReadOnly = True
         Me.dvgStaffTable.RowHeadersWidth = 51
         Me.dvgStaffTable.RowTemplate.Height = 29
         Me.dvgStaffTable.Size = New System.Drawing.Size(1058, 171)
@@ -508,13 +511,13 @@ Partial Class Staff
         '
         Me.Panel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer), CType(CType(64, Byte), Integer))
         Me.Panel2.Controls.Add(Me.Button8)
-        Me.Panel2.Controls.Add(Me.Button7)
-        Me.Panel2.Controls.Add(Me.Button4)
-        Me.Panel2.Controls.Add(Me.Button6)
-        Me.Panel2.Controls.Add(Me.Button3)
-        Me.Panel2.Controls.Add(Me.Button5)
-        Me.Panel2.Controls.Add(Me.Button2)
-        Me.Panel2.Controls.Add(Me.Button1)
+        Me.Panel2.Controls.Add(Me.btnUsers)
+        Me.Panel2.Controls.Add(Me.btnStaffs)
+        Me.Panel2.Controls.Add(Me.btnAuthors)
+        Me.Panel2.Controls.Add(Me.btnCategory)
+        Me.Panel2.Controls.Add(Me.btnReaders)
+        Me.Panel2.Controls.Add(Me.btnBooks)
+        Me.Panel2.Controls.Add(Me.btnDashboard)
         Me.Panel2.Dock = System.Windows.Forms.DockStyle.Left
         Me.Panel2.Location = New System.Drawing.Point(0, 125)
         Me.Panel2.Name = "Panel2"
@@ -534,95 +537,95 @@ Partial Class Staff
         Me.Button8.Text = "Sign Out"
         Me.Button8.UseVisualStyleBackColor = False
         '
-        'Button7
+        'btnUsers
         '
-        Me.Button7.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button7.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_users_35
-        Me.Button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button7.Location = New System.Drawing.Point(3, 488)
-        Me.Button7.Name = "Button7"
-        Me.Button7.Size = New System.Drawing.Size(235, 56)
-        Me.Button7.TabIndex = 0
-        Me.Button7.Text = "Manage Users"
-        Me.Button7.UseVisualStyleBackColor = False
+        Me.btnUsers.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnUsers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnUsers.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_users_35
+        Me.btnUsers.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnUsers.Location = New System.Drawing.Point(3, 488)
+        Me.btnUsers.Name = "btnUsers"
+        Me.btnUsers.Size = New System.Drawing.Size(235, 56)
+        Me.btnUsers.TabIndex = 0
+        Me.btnUsers.Text = "Manage Users"
+        Me.btnUsers.UseVisualStyleBackColor = False
         '
-        'Button4
+        'btnStaffs
         '
-        Me.Button4.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button4.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_users_30__1_
-        Me.Button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button4.Location = New System.Drawing.Point(3, 301)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(235, 56)
-        Me.Button4.TabIndex = 0
-        Me.Button4.Text = "Manage Staff"
-        Me.Button4.UseVisualStyleBackColor = False
+        Me.btnStaffs.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnStaffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnStaffs.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_users_30__1_
+        Me.btnStaffs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnStaffs.Location = New System.Drawing.Point(3, 301)
+        Me.btnStaffs.Name = "btnStaffs"
+        Me.btnStaffs.Size = New System.Drawing.Size(235, 56)
+        Me.btnStaffs.TabIndex = 0
+        Me.btnStaffs.Text = "Manage Staff"
+        Me.btnStaffs.UseVisualStyleBackColor = False
         '
-        'Button6
+        'btnAuthors
         '
-        Me.Button6.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button6.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_owner_30
-        Me.Button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button6.Location = New System.Drawing.Point(3, 425)
-        Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(235, 56)
-        Me.Button6.TabIndex = 0
-        Me.Button6.Text = "Author"
-        Me.Button6.UseVisualStyleBackColor = False
+        Me.btnAuthors.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnAuthors.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnAuthors.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_owner_30
+        Me.btnAuthors.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnAuthors.Location = New System.Drawing.Point(3, 425)
+        Me.btnAuthors.Name = "btnAuthors"
+        Me.btnAuthors.Size = New System.Drawing.Size(235, 56)
+        Me.btnAuthors.TabIndex = 0
+        Me.btnAuthors.Text = "Author"
+        Me.btnAuthors.UseVisualStyleBackColor = False
         '
-        'Button3
+        'btnCategory
         '
-        Me.Button3.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button3.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_bullet_list_30
-        Me.Button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button3.Location = New System.Drawing.Point(3, 239)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(235, 56)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Category List "
-        Me.Button3.UseVisualStyleBackColor = False
+        Me.btnCategory.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnCategory.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_bullet_list_30
+        Me.btnCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnCategory.Location = New System.Drawing.Point(3, 239)
+        Me.btnCategory.Name = "btnCategory"
+        Me.btnCategory.Size = New System.Drawing.Size(235, 56)
+        Me.btnCategory.TabIndex = 0
+        Me.btnCategory.Text = "Category List "
+        Me.btnCategory.UseVisualStyleBackColor = False
         '
-        'Button5
+        'btnReaders
         '
-        Me.Button5.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button5.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_readers_30
-        Me.Button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button5.Location = New System.Drawing.Point(3, 363)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(235, 56)
-        Me.Button5.TabIndex = 0
-        Me.Button5.Text = "Readers"
-        Me.Button5.UseVisualStyleBackColor = False
+        Me.btnReaders.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnReaders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnReaders.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_readers_30
+        Me.btnReaders.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnReaders.Location = New System.Drawing.Point(3, 363)
+        Me.btnReaders.Name = "btnReaders"
+        Me.btnReaders.Size = New System.Drawing.Size(235, 56)
+        Me.btnReaders.TabIndex = 0
+        Me.btnReaders.Text = "Readers"
+        Me.btnReaders.UseVisualStyleBackColor = False
         '
-        'Button2
+        'btnBooks
         '
-        Me.Button2.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button2.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_books_30
-        Me.Button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button2.Location = New System.Drawing.Point(3, 176)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(235, 56)
-        Me.Button2.TabIndex = 0
-        Me.Button2.Text = "Manage Books "
-        Me.Button2.UseVisualStyleBackColor = False
+        Me.btnBooks.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnBooks.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnBooks.Image = Global.Library_Managemey_System.My.Resources.Resources.icons8_books_30
+        Me.btnBooks.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnBooks.Location = New System.Drawing.Point(3, 176)
+        Me.btnBooks.Name = "btnBooks"
+        Me.btnBooks.Size = New System.Drawing.Size(235, 56)
+        Me.btnBooks.TabIndex = 0
+        Me.btnBooks.Text = "Manage Books "
+        Me.btnBooks.UseVisualStyleBackColor = False
         '
-        'Button1
+        'btnDashboard
         '
-        Me.Button1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.Button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Button1.Location = New System.Drawing.Point(3, 114)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(235, 56)
-        Me.Button1.TabIndex = 0
-        Me.Button1.Text = "Dashboard"
-        Me.Button1.UseVisualStyleBackColor = False
+        Me.btnDashboard.BackColor = System.Drawing.SystemColors.ActiveBorder
+        Me.btnDashboard.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btnDashboard.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.btnDashboard.Location = New System.Drawing.Point(3, 114)
+        Me.btnDashboard.Name = "btnDashboard"
+        Me.btnDashboard.Size = New System.Drawing.Size(235, 56)
+        Me.btnDashboard.TabIndex = 0
+        Me.btnDashboard.Text = "Dashboard"
+        Me.btnDashboard.UseVisualStyleBackColor = False
         '
         'PictureBox2
         '
@@ -791,13 +794,13 @@ Partial Class Staff
     Friend WithEvents Label3 As Label
     Friend WithEvents Panel2 As Panel
     Friend WithEvents Button8 As Button
-    Friend WithEvents Button7 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button6 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button5 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button1 As Button
+    Friend WithEvents btnUsers As Button
+    Friend WithEvents btnStaffs As Button
+    Friend WithEvents btnAuthors As Button
+    Friend WithEvents btnCategory As Button
+    Friend WithEvents btnReaders As Button
+    Friend WithEvents btnBooks As Button
+    Friend WithEvents btnDashboard As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnClose As Button
     Friend WithEvents btnMaximize As Button

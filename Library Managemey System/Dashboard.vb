@@ -1,4 +1,7 @@
-﻿Public Class Dashboard
+﻿Imports System.Data
+Imports System.Data.SqlClient
+Public Class Dashboard
+    Dim dbconn = New SqlConnection("Data Source=.;Initial Catalog=LMS;Integrated Security=True")
     Private Sub PictureBox1_Click(sender As Object, e As EventArgs) Handles PictureBox1.Click
 
     End Sub
@@ -38,5 +41,28 @@
     Private Sub btnMin_Click(sender As Object, e As EventArgs) Handles btnMin.Click
         'COde to hide form
         WindowState = FormWindowState.Maximized
+    End Sub
+
+    Private Sub Label7_Click(sender As Object, e As EventArgs) Handles lblTotalStaff.Click
+        CountTotalStaff()
+    End Sub
+
+    Public Sub CountTotalStaff()
+        Dim querryCommand As New SqlCommand("SELECT COUNT(*) FROM Staff", dbconn)
+        dbconn.Open()
+        Dim TotalStaff As String = querryCommand.ExecuteScalar
+        lblTotalStaff.Text = TotalStaff
+        dbconn.Close()
+
+
+    End Sub
+
+    Private Sub Dashboard_Load(sender As Object, e As EventArgs)
+        'calling count staff method 
+        CountTotalStaff()
+    End Sub
+
+    Private Sub Dashboard_Load_1(sender As Object, e As EventArgs)
+
     End Sub
 End Class

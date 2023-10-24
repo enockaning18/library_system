@@ -47,7 +47,7 @@ Partial Class Dashboard
         Me.Panel14 = New System.Windows.Forms.Panel()
         Me.Label13 = New System.Windows.Forms.Label()
         Me.Panel8 = New System.Windows.Forms.Panel()
-        Me.Label7 = New System.Windows.Forms.Label()
+        Me.lblTotalStaff = New System.Windows.Forms.Label()
         Me.Panel13 = New System.Windows.Forms.Panel()
         Me.Label12 = New System.Windows.Forms.Label()
         Me.Panel7 = New System.Windows.Forms.Panel()
@@ -312,7 +312,6 @@ Partial Class Dashboard
         Me.Panel3.Controls.Add(Me.Panel5)
         Me.Panel3.Controls.Add(Me.Panel10)
         Me.Panel3.Controls.Add(Me.Panel4)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(235, 125)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1137, 655)
@@ -386,23 +385,23 @@ Partial Class Dashboard
         'Panel8
         '
         Me.Panel8.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer), CType(CType(128, Byte), Integer))
-        Me.Panel8.Controls.Add(Me.Label7)
+        Me.Panel8.Controls.Add(Me.lblTotalStaff)
         Me.Panel8.Font = New System.Drawing.Font("Segoe UI", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point)
         Me.Panel8.Location = New System.Drawing.Point(784, 79)
         Me.Panel8.Name = "Panel8"
         Me.Panel8.Size = New System.Drawing.Size(228, 229)
         Me.Panel8.TabIndex = 0
         '
-        'Label7
+        'lblTotalStaff
         '
-        Me.Label7.AutoSize = True
-        Me.Label7.Font = New System.Drawing.Font("Segoe UI", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.Label7.ForeColor = System.Drawing.Color.White
-        Me.Label7.Location = New System.Drawing.Point(51, 11)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(136, 159)
-        Me.Label7.TabIndex = 0
-        Me.Label7.Text = "0"
+        Me.lblTotalStaff.AutoSize = True
+        Me.lblTotalStaff.Font = New System.Drawing.Font("Segoe UI", 72.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.lblTotalStaff.ForeColor = System.Drawing.Color.White
+        Me.lblTotalStaff.Location = New System.Drawing.Point(51, 11)
+        Me.lblTotalStaff.Name = "lblTotalStaff"
+        Me.lblTotalStaff.Size = New System.Drawing.Size(136, 159)
+        Me.lblTotalStaff.TabIndex = 0
+        Me.lblTotalStaff.Text = "0"
         '
         'Panel13
         '
@@ -638,7 +637,7 @@ Partial Class Dashboard
     Friend WithEvents Panel9 As Panel
     Friend WithEvents Label8 As Label
     Friend WithEvents Panel8 As Panel
-    Friend WithEvents Label7 As Label
+    Friend WithEvents lblTotalStaff As Label
     Friend WithEvents Panel7 As Panel
     Friend WithEvents Label6 As Label
     Friend WithEvents Panel6 As Panel
