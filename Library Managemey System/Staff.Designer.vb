@@ -441,7 +441,6 @@ Partial Class Staff
         Me.Panel3.Controls.Add(Me.Panel13)
         Me.Panel3.Controls.Add(Me.Panel11)
         Me.Panel3.Controls.Add(Me.Label3)
-        Me.Panel3.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel3.Location = New System.Drawing.Point(235, 125)
         Me.Panel3.Name = "Panel3"
         Me.Panel3.Size = New System.Drawing.Size(1125, 608)

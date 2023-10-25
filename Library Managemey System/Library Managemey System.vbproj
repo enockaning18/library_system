@@ -4,7 +4,7 @@
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <RootNamespace>Library_Managemey_System</RootNamespace>
-    <StartupObject>Library_Managemey_System.Staff</StartupObject>
+    <StartupObject>Library_Managemey_System.Category</StartupObject>
     <UseWindowsForms>true</UseWindowsForms>
     <MyType>WindowsForms</MyType>
   </PropertyGroup>
