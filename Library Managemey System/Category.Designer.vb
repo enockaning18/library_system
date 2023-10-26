@@ -23,7 +23,7 @@ Partial Class Category
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.btnMinimize = New System.Windows.Forms.Button()
-        Me.dvgStaffTable = New System.Windows.Forms.DataGridView()
+        Me.dvgCategoryTable = New System.Windows.Forms.DataGridView()
         Me.btnDelete = New System.Windows.Forms.Button()
         Me.btnEdit = New System.Windows.Forms.Button()
         Me.btnUpdate = New System.Windows.Forms.Button()
@@ -32,7 +32,7 @@ Partial Class Category
         Me.txtPrint = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
+        Me.llkSearch = New System.Windows.Forms.LinkLabel()
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.btnBooks = New System.Windows.Forms.Button()
         Me.btnReaders = New System.Windows.Forms.Button()
@@ -68,7 +68,7 @@ Partial Class Category
         Me.cmbCreatedBy = New System.Windows.Forms.ComboBox()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
-        CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dvgCategoryTable, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel15.SuspendLayout()
@@ -92,18 +92,19 @@ Partial Class Category
         Me.btnMinimize.Text = "-"
         Me.btnMinimize.UseVisualStyleBackColor = True
         '
-        'dvgStaffTable
+        'dvgCategoryTable
         '
-        Me.dvgStaffTable.AllowUserToAddRows = False
-        Me.dvgStaffTable.AllowUserToDeleteRows = False
-        Me.dvgStaffTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dvgStaffTable.Location = New System.Drawing.Point(42, 431)
-        Me.dvgStaffTable.Name = "dvgStaffTable"
-        Me.dvgStaffTable.ReadOnly = True
-        Me.dvgStaffTable.RowHeadersWidth = 51
-        Me.dvgStaffTable.RowTemplate.Height = 29
-        Me.dvgStaffTable.Size = New System.Drawing.Size(1058, 171)
-        Me.dvgStaffTable.TabIndex = 16
+        Me.dvgCategoryTable.AllowUserToAddRows = False
+        Me.dvgCategoryTable.AllowUserToDeleteRows = False
+        Me.dvgCategoryTable.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill
+        Me.dvgCategoryTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dvgCategoryTable.Location = New System.Drawing.Point(42, 431)
+        Me.dvgCategoryTable.Name = "dvgCategoryTable"
+        Me.dvgCategoryTable.ReadOnly = True
+        Me.dvgCategoryTable.RowHeadersWidth = 51
+        Me.dvgCategoryTable.RowTemplate.Height = 29
+        Me.dvgCategoryTable.Size = New System.Drawing.Size(1058, 171)
+        Me.dvgCategoryTable.TabIndex = 16
         '
         'btnDelete
         '
@@ -215,17 +216,17 @@ Partial Class Category
         Me.btnClose.Text = "X"
         Me.btnClose.UseVisualStyleBackColor = False
         '
-        'LinkLabel1
+        'llkSearch
         '
-        Me.LinkLabel1.AutoSize = True
-        Me.LinkLabel1.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
-        Me.LinkLabel1.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
-        Me.LinkLabel1.Location = New System.Drawing.Point(1025, 360)
-        Me.LinkLabel1.Name = "LinkLabel1"
-        Me.LinkLabel1.Size = New System.Drawing.Size(75, 28)
-        Me.LinkLabel1.TabIndex = 18
-        Me.LinkLabel1.TabStop = True
-        Me.LinkLabel1.Text = "Search"
+        Me.llkSearch.AutoSize = True
+        Me.llkSearch.Font = New System.Drawing.Font("Segoe UI", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point)
+        Me.llkSearch.LinkBehavior = System.Windows.Forms.LinkBehavior.NeverUnderline
+        Me.llkSearch.Location = New System.Drawing.Point(1025, 360)
+        Me.llkSearch.Name = "llkSearch"
+        Me.llkSearch.Size = New System.Drawing.Size(75, 28)
+        Me.llkSearch.TabIndex = 18
+        Me.llkSearch.TabStop = True
+        Me.llkSearch.Text = "Search"
         '
         'txtSearch
         '
@@ -324,6 +325,7 @@ Partial Class Category
         Me.txtCategoryID.Location = New System.Drawing.Point(188, 95)
         Me.txtCategoryID.Multiline = True
         Me.txtCategoryID.Name = "txtCategoryID"
+        Me.txtCategoryID.ReadOnly = True
         Me.txtCategoryID.Size = New System.Drawing.Size(198, 34)
         Me.txtCategoryID.TabIndex = 8
         '
@@ -566,8 +568,8 @@ Partial Class Category
         '
         Me.Panel3.Controls.Add(Me.dtpDateAdded)
         Me.Panel3.Controls.Add(Me.cmbCreatedBy)
-        Me.Panel3.Controls.Add(Me.LinkLabel1)
-        Me.Panel3.Controls.Add(Me.dvgStaffTable)
+        Me.Panel3.Controls.Add(Me.llkSearch)
+        Me.Panel3.Controls.Add(Me.dvgCategoryTable)
         Me.Panel3.Controls.Add(Me.btnDelete)
         Me.Panel3.Controls.Add(Me.btnEdit)
         Me.Panel3.Controls.Add(Me.btnUpdate)
@@ -638,7 +640,7 @@ Partial Class Category
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Category"
         Me.Text = "Category"
-        CType(Me.dvgStaffTable, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dvgCategoryTable, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel15.ResumeLayout(False)
@@ -659,7 +661,7 @@ Partial Class Category
     End Sub
 
     Friend WithEvents btnMinimize As Button
-    Friend WithEvents dvgStaffTable As DataGridView
+    Friend WithEvents dvgCategoryTable As DataGridView
     Friend WithEvents btnDelete As Button
     Friend WithEvents btnEdit As Button
     Friend WithEvents btnUpdate As Button
@@ -668,7 +670,7 @@ Partial Class Category
     Friend WithEvents txtPrint As Button
     Friend WithEvents PictureBox2 As PictureBox
     Friend WithEvents btnClose As Button
-    Friend WithEvents LinkLabel1 As LinkLabel
+    Friend WithEvents llkSearch As LinkLabel
     Friend WithEvents txtSearch As TextBox
     Friend WithEvents btnBooks As Button
     Friend WithEvents btnReaders As Button
